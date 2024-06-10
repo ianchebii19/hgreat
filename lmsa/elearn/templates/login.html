@@ -1,0 +1,63 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block title%} Login{% endblock%}
+{% block main%}
+
+
+
+<link href="{% static 'css/kye.css' %}" rel="stylesheet">
+<style type="text/css">
+	#bg{
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 100%;
+	}
+</style>
+<link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/four/css/bootstrap.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/three/css/bootstrap.min.css' %}">
+
+
+
+
+<body id="bg" style="background-image: url('{% static "img/white 4.jpg"%}');">
+  <div class="container-fluid">
+  <div class="row" style = "padding-top: 250px">
+    <div class="col-md-6 offset-md-3">
+        <div class="filter"></div>
+        <div class="container bg-secondary">
+           <center><h4 style="color: white">HGreat Academy</h4></center>
+           <br>
+            <form action="{% url 'login' %}" method="POST">
+            {% csrf_token %}
+                <label class="text-light">Username</label><br>
+                <input type="text" name="username" required="Fill Username" style="background-color: white"><br>
+                <label  class="text-light">Password</label><br>
+                <input type="password" name="password" required="Fill Password" style="background-color: white"><br>
+                <button class="bg-success">Sign in</button>
+
+                <div>
+                  <p class="text-light">Create an Account
+                  <a href="{%url 'lsign'%}">SignUp</a></p>
+              </div>
+            </form>
+                  <div class="card-footer">
+        <div class="d-flex justify-content-center">
+            <div class="messages">
+                {% for message in messages %}
+                    <a class="alert alert-success" style="color:red;"> {{ message }}</a>
+                {% endfor %}
+            </div>
+          </div>
+              </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+</body>
+
+
+{% endblock %}
+
+

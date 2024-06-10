@@ -1,0 +1,62 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block title%} SignUp{% endblock%}
+{% block main%}
+{% load static %}
+
+
+{% load crispy_forms_tags %}
+
+
+
+<link href="{% static 'css/kye.css' %}" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/four/css/bootstrap.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/three/css/bootstrap.min.css' %}">
+<style type="text/css">
+  #bg{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+  }
+</style>
+{% load crispy_forms_tags %}
+
+
+<body id="bg" style="background-image: url('{% static "img/white 1.jpg"%}');">
+    <div class="container-fluid">
+  <div class="row">
+
+    <div class="col-md-6 offset-md-3 border border-5 mt-3 rounded">
+      <form method="post" novalidate>
+     <h2 class="text-success align-middle mt-2">SignUp as Learner</h2>
+
+      
+        {% csrf_token %}
+        {% for field in form %}
+            {{ field.label_tag }} {{ field }} <small class="text-danger">{{ field.errors|striptags }}</small><br>
+        {% endfor %}
+        
+
+        <button type="submit" class="btn btn-success align-middle">Sign up</button>
+        <div>
+          <p class="text-danger">Existing Customer?
+          <a href="{%url 'login_form'%}">Login</a></p>
+      </div>
+      </form>
+       
+        <div class="d-flex justify-content-center">
+            <div class="messages">
+                {% for message in messages %}
+
+                    <a class="alert alert-success" style="color:red;"> {{ message }}</a>
+
+                {% endfor %}
+            </div>
+          </div>
+              </div>
+
+    </div>
+  </div>
+</div>
+
+{%endblock%}

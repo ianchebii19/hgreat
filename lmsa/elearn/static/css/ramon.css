@@ -1,0 +1,133 @@
+@media screen and (min-width: 710px) {
+    body{
+      background-color: rgb(197, 223, 164);
+        color: #180202;
+    }
+    .header{
+      height: 50px;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        width: 100%;
+        position: absolute;
+        color: rgb(173, 12, 39);
+        background-color:rgb(163, 219, 155);
+  
+    }
+    .sidebar ul li  {
+        display: none;
+    }
+    .logo {
+        padding: 10px;
+        font-size: 1.3rem;
+        padding-left: 30px;
+       
+        font-weight: 600;
+        margin-left: 10px;
+    }
+    .navbar ul  {
+        justify-content: right;
+        overflow: hidden;
+       display: flex;
+       
+        padding: 10px;
+        
+       
+      }
+    .navbar li{
+      list-style-type: none;
+    }
+    .navbar a{
+      text-decoration: none;
+      color: #180202;
+      font-size: 1.15rem;
+      padding: 10px;
+      position: relative;
+    }
+    .navbar a:hover{
+      color: rgb(196, 32, 32);
+    }
+
+      .menuIco{
+        display: none;
+     
+      }}
+      @media screen and (max-width:710px) {
+        
+        .header{
+          top: 0;
+          left: 0;
+          right: 0;
+          display: flex;
+          width: 100%;
+          position: absolute;
+          color:  rgb(150, 20, 20);
+          background-color:rgb(163, 219, 155);
+          border-radius: 2px;
+    
+    
+      }
+      body{
+        background-color: rgb(197, 223, 164);
+          color: #180202;
+      }
+      .logo {
+          padding: 10px;
+          font-size: 1.5rem;
+          padding-left: 20px;
+          font-weight: 700;
+          margin-left: 5px;
+      }
+      .menuIco  {
+          color: rgb(182, 12, 12);
+          display: block;
+          cursor: pointer;
+          position: absolute;
+          right: 10px;
+          top: 50%;
+          padding: 10px;
+          transform: translateY(-50%);
+          font-size: 20px;
+        }
+        #bxa{
+          display: none;
+          font-weight: 600;
+          font-size: 1.7rem;
+        }
+        .navbar ul  {
+          display: none;
+        }
+
+           
+        .sidebar {
+          float: right;
+          width: 200px;
+          border-radius: 5px;
+          display: none;
+          justify-content: flex-end;
+          right: -60%;
+          padding: 7px;
+          padding-left: 8px;
+          margin-top: 10px;
+          background-color: rgb(158, 211, 147);
+          z-index: 999;
+          position: absolute;
+      }
+      
+      .sidebar a {
+          text-decoration: none;
+          color: rgb(20, 4, 7);
+          font-size: 1.2rem;
+          padding-top: 8px;
+      }
+      
+      .sidebar li {
+          list-style-type: none;
+          padding: 5px;
+      }
+      
+      .sidebar a:hover {
+          color: rgb(212, 22, 38);
+      }}
+      
